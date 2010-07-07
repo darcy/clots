@@ -8,7 +8,7 @@ module Clot
       if (class_name.blank?)
         class_name = target.dropped_class.to_s.tableize
       end
-      '/' + class_name + "/" + target.id.to_s
+      '/' + class_name + "/" + target.to_param.to_s
     end
 
     #get url from object and nested object

@@ -82,6 +82,10 @@ module Clot
       @source.id
     end
     
+    def to_param
+      @source.respond_to?(:to_param) ? @source.to_param : id
+    end
+    
     def dropped_class
       @source.class
     end
