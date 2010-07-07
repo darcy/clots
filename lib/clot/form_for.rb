@@ -107,7 +107,9 @@ module Clot
         syntax_error
       end
       if @attributes["parent"]
-        @form_action = object_url(context[@attributes["parent"]]) + @form_action
+        @attributes["parent"].split(":").each do |p|
+          @form_action = object_url(context[p]) + @form_action
+        end
       end
       unless @attributes["post_method"].nil?
         @form_action += '/' + @attributes["post_method"]
