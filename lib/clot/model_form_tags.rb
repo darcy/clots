@@ -29,7 +29,7 @@ module Clot
     def render(context)
       result = super(context)
       if @errors.include? @attribute_name
-        result = "<div class=\"fieldWithErrors\">#{result}</div>"
+        result = "<span class=\"fieldWithErrors\">#{result}</span>"
       end
       result
     end
