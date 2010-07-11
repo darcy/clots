@@ -50,7 +50,9 @@ module Clot
   class PasswordField < PasswordFieldTag
     include ModelTag
   end
-
+  class HiddenField < HiddenFieldTag
+    include ModelTag
+  end
   class TextField < TextFieldTag
     include ModelTag
   end
