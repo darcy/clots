@@ -116,7 +116,9 @@ class LiquidDemoModelDrop < Liquid::Drop
       send method.to_s
     end
 
-
+    def to_param
+      id
+    end
 
 
   #probably should be able to remove this shite....
